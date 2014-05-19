@@ -1,13 +1,17 @@
 
 public class Stapel {
 	
-	String[] kellerspeicher;
-	int position = -1;
+	private String[] kellerspeicher;
+	private int position = -1;
 	
-	Stapel(int groesse) {
+	public Stapel(int groesse) {
 		
 		kellerspeicher = new String[groesse];
 		
+	}
+	
+	public boolean istLeer() {
+		return position == -1 ? true : false;
 	}
 	
 	public void reinlegen(String wort) {
@@ -19,10 +23,14 @@ public class Stapel {
 	
 	public String rausholen() {
 		
-		String aktuellesWort = kellerspeicher[position];
-		kellerspeicher[position] = null;
-		position--;
-		return aktuellesWort;
+		if (istLeer()) {
+			return "Stapel ist Leer. Rausholen nicht möglich.";
+		} else {
+			String aktuellesWort = kellerspeicher[position];
+			kellerspeicher[position] = null;
+			position--;
+			return aktuellesWort;
+		}
 		
 	}
 	
