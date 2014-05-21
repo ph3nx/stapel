@@ -42,5 +42,9 @@ public class Stapel {
 		}
 		
 	}
+	
+	public int anzahl() {
+		return position + 1;
+	}
 
 }

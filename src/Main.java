@@ -1,6 +1,7 @@
 
 public class Main {
-
+	
+	/*
 	public static void main(String[] args) {
 		
 		Stapel stapel = new Stapel(10);
@@ -29,5 +30,6 @@ public class Main {
 		System.out.println(s2.rausholen()); // => "Stapel ist Leer. Rausholen nicht möglich."
 
 	}
+	*/
 
 }
